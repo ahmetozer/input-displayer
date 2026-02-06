@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="theme-color" id="metaTheme" content="#f5f5f5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Input Displayer">
+    <title>Input Displayer</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%231a1a2e'/%3E%3Ccircle cx='50' cy='42' r='16' fill='none' stroke='%234a9eff' stroke-width='4'/%3E%3Ccircle cx='50' cy='42' r='5' fill='%234a9eff'/%3E%3Crect x='28' y='68' width='44' height='5' rx='2.5' fill='%234a9eff'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header id="toolbar">
+            <div class="toolbar-group">
+                <div class="select-wrap">
+                    <select id="deviceSelect" title="Video source"></select>
+                </div>
+                <button id="reconnectBtn" type="button" title="Reconnect" aria-label="Reconnect">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="23 4 23 10 17 10"/>
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="toolbar-group">
+                <label id="mirrorLabel" title="Mirror video horizontally">
+                    <input type="checkbox" id="mirrorCheck">
+                    <span>Mirror</span>
+                </label>
+                <button id="themeBtn" type="button" title="Theme: System">Auto</button>
+                <button id="fullscreenBtn" type="button" title="Enter fullscreen" aria-label="Fullscreen">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="8 3 3 3 3 8"/>
+                        <polyline points="16 3 21 3 21 8"/>
+                        <polyline points="8 21 3 21 3 16"/>
+                        <polyline points="16 21 21 21 21 16"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <main id="videoContainer">
+            <video id="video" autoplay playsinline muted disablepictureinpicture></video>
+            <div id="overlay">
+                <p id="statusText">Select a device to begin</p>
+                <button id="startBtn" type="button">Connect</button>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

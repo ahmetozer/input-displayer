@@ -1,5 +1,5 @@
 const CACHE = 'input-displayer-v1';
-const ASSETS = ['./', './index.html', './style.css', './app.js', './manifest.json'];
+const ASSETS = ['./', './index.html', './assets/style.css', './assets/app.js', './assets/manifest.json'];
 
 self.addEventListener('install', e => {
   e.waitUntil(

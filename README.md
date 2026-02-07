@@ -2,6 +2,10 @@
 
 A lightweight PWA that displays video from USB capture devices in the browser. Designed for use as a monitor replacement, teleprompter display, or camera preview.
 
+**Live demo:** https://ahmetozer.github.io/input-displayer/
+
+![Input Displayer screenshot](assets/example.png)
+
 ## Features
 
 - **Device selection** -- dropdown lists all available video inputs, switch sources on the fly
@@ -23,11 +27,12 @@ HTTPS or localhost is required for camera access.
 ## Files
 
 ```
-index.html      UI structure
-style.css       Styles, dark mode, responsive layout
-app.js          Application logic
-sw.js           Service worker (offline caching)
-manifest.json   PWA manifest
+index.html              UI structure
+sw.js                   Service worker (offline caching)
+assets/
+  style.css             Styles, dark mode, responsive layout
+  app.js                Application logic
+  manifest.json         PWA manifest
 ```
 
 ## Usage
